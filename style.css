@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(-90deg, #0000ff, #063d91);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  position: relative;
+  background: #9fc2e4;
+  border-radius: 30px;
+  padding: 40px 30px;
+  width: 340px;
+  text-align: center;
+  color: black;
+  animation: iniciar 1.6s ease-out;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Logo com efeito pulse */
+#logo svg {
+  width: 220px;
+  height: auto;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease;
+}
+
+#logo:hover svg {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Botão estilizado */
+#btn button {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(-90deg, #0000ff, #063d91);
+  width: 100%;
+  height: 50px;
+  border: none;
+  font-size: 1.3em;
+  color: #fff;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+#btn button:hover {
+  background: linear-gradient(-90deg, #063d91, #0000ff);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+#btn button:active {
+  transform: translateY(2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+@keyframes iniciar {
+  0% {
+    top: -50%;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
